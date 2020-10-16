@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Transition Examples</title>
+    
+  </head>
+  <style>
+    .transition {
+      background: blueviolet;
+      width: 300px;
+      height: 150px;
+      margin: 50px auto;
+      transition: 500ms linear;
+    }
+    .transition:hover {
+      opacity: 0.5;
+      width: 500px;
+      height: 250px;
+      background-color: rgb(231, 51, 5);
+      transform: scale(1.1);
+    }
+    #delay {
+            transition-property: font-size;
+            transition-duration: 4s;
+            transition-delay: 2s;
+    }
+
+    .animation {
+      background: orange;
+      width: 300px;
+      height: 150px;
+      margin: 50px auto;
+      animation: moveToRight 2s ease-in-out;
+      animation-delay: 3000ms;
+    }
+
+    @keyframes moveToRight {
+      0% {
+        transform: translateX(0px);
+      }
+      50%{
+          transform: translateX(200px);
+          background-color: brown;
+      }
+      100% {
+        transform: translateX(400px);
+        background-color: darkblue;
+      }
+    }
+    
+    .more_animation {
+      background: orange;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      margin: 20px auto;
+      animation: moveToLeft 5s linear infinite;
+      animation-delay: 1000ms;
+    }
+
+    @keyframes moveToLeft {
+      0% {
+        transform: translateX(0px);
+        background: linear-gradient(
+          to right,
+          #ff8177 0%,
+          #ff867a 0%,
+          #ff8c7f 21%,
+          #f99185 52%,
+          #cf556c 78%,
+          #b12a5b 100%
+        );
+      }
+      25% {
+        transform: translateX(400px);
+        background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      }
+      50% {
+        transform: translateY(200px) translateX(400px);
+        background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+      }
+
+      75% {
+        transform: translateX(0px) translateY(200px);
+        background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+h1{
+    text-align: center;
+    color: rgb(35, 179, 35);
+}
+  </style>
+  <body>
+      <h1>CSS Transition Examples </h1><br>
+    <div class="transition"></div>
+<br><br>
+
+<h1>CSS More Animation Examples </h1><br>
+<div class="more_animation"></div><br>
+    <h1>CSS Animation Examples </h1><br>
+    <div class="animation"></div>
+
+   
+
+  </body>
+</html>
